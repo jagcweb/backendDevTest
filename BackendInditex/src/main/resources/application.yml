@@ -1,0 +1,14 @@
+server:
+  port: ${SERVER_PORT:5000}
+
+catalog:
+  base-url: ${CATALOG_BASE_URL:http://localhost:3001}
+  # The mocked catalog responds instantly for the happy path but simulates slow products
+  # (1s / 5s / 50s). These timeouts keep /similar responsive: a slow upstream call is
+  # treated as a failure for that single product rather than stalling the whole response.
+  similar-ids-timeout: ${CATALOG_SIMILAR_IDS_TIMEOUT:2s}
+  product-detail-timeout: ${CATALOG_PRODUCT_DETAIL_TIMEOUT:2s}
+
+logging:
+  level:
+    com.example.similarproducts: INFO
