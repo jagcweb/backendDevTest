@@ -9,6 +9,12 @@ We already have an endpoint that provides the product Ids similar for a given on
 
 Note that _Test_ and _Mocks_ components are given, you must only implement _yourApp_.
 
+## My solution
+
+The Spring Boot application implementing the agreed contract lives in [`BackendInditex/`](./BackendInditex/).
+See its [README](./BackendInditex/README.md) for how to build and run it (Docker-only, no local
+Java/Maven required) and the design rationale behind the resilience and performance choices.
+
 ## Testing and Self-evaluation
 You can run the same test we will put through your application. You just need to have docker installed.
 
